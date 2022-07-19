@@ -65,6 +65,18 @@ justify-content: center;
   height: 340px;
 }
 
+.scores-display p {
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding:0 5px;
+}
+
+.scores-display p:nth-child(even){
+  background-color: rgba(214, 211, 207, 0.5);
+}
+
 input[type="text"] {
   border: 1px solid black;
   height:30px;
