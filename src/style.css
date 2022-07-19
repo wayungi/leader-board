@@ -14,7 +14,6 @@ input {
 }
 
 .wrapper {
-  outline: 1px solid black;
   height: 100vh;
 }
 
@@ -35,13 +34,8 @@ input[type="button"] {
   font-weight: bold;
 }
 
-.section-titles {
-  outline: 1px solid green;
-}
-
 .sub-title-2 {
   flex-wrap: nowrap;
-  outline: 1px solid black;
   width:50%;
   margin-bottom:30px;
 }
@@ -64,7 +58,6 @@ justify-content: center;
 
 .main-section {
   width:50%;
-  outline: 1px solid green;
 }
 
 .scores-display {
@@ -103,8 +96,4 @@ input[type="submit"] {
 .flex-row, .sub-title-2 {
   display:flex;
   flex-direction: row;
-}
-
-body {
-  background-color: bisque;
 }
