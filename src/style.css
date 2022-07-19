@@ -1,33 +1,21 @@
-body, header, div, h1, h2, p, section, input {
-    margin:0;
-    padding:0;
+body,
+header,
+div,
+h1,
+h2,
+p,
+section,
+input {
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
-    outline:1px solid black;
-    height:100vh;
-    box-sizing:border-box;
+  outline: 1px solid black;
+  height: 100vh;
+  box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 body {
-    background-color: bisque;
+  background-color: bisque;
 }
-
