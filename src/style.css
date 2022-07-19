@@ -8,12 +8,38 @@ section,
 input {
   margin: 0;
   padding: 0;
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .wrapper {
   outline: 1px solid black;
   height: 100vh;
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4em;
+  margin:40px 0 40px 20px;
+}
+
+.content {
+  flex-wrap: nowrap;
+ 
+}
+
+section {
+  outline: 1px solid green;
+}
+
+.flex-col {
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display:grid;
+  flex-direction: row;
 }
 
 body {
