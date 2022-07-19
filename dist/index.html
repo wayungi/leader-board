@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Leader boadr</title>
+  <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
+  <body>
+    <!-- main wrapper div -->
+    <div class="wrapper">
+      <h1>Leaderboard</h1>
+      <!-- content div -->
+      <div>
+        <!-- scores div -->
+        <section class="scores">
+          <div class="scores-title">
+            <h2>Recent scores</h2>
+            <input type="button" value="Refresh" id="refresh-btn" />
+          </div>
+
+          <!-- scores are displayed in this div -->
+          <div class="scores-display"></div>
+        </section>
+
+        <!-- add score div -->
+        <section class="add-scores">
+          <div class="add-scores-title" id="add-score">
+            <h2>Add your score</h2>
+          </div>
+
+          <form>
+            <input type="text" name="name" id="name" />
+            <input type="text" name="score" id="score" />
+            <input type="submit" value="submit" id="submit-btn" />
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
