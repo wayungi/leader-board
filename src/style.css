@@ -60,8 +60,10 @@ justify-content: center;
 input[type="text"] {
   all:unset;
   border: 1px solid black;
-  height:40px;
-  margin-bottom:40px;
+  height:30px;
+  margin-bottom:30px;
+  padding: 3px 8px;
+  font-size: 1.5em;
 }
 
 
