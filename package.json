@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/wayungi/leader-board/issues"
   },
-  "homepage": "https://github.com/wayungi/leader-board#readme"
+  "homepage": "https://github.com/wayungi/leader-board#readme",
+  "devDependencies": {
+    "hint": "^7.1.0"
+  }
 }
