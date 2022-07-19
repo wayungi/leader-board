@@ -1,0 +1,24 @@
+{
+  "name": "leader-board",
+  "version": "1.0.0",
+  "description": "application that displays scores submitted by different users",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wayungi/leader-board.git"
+  },
+  "keywords": [
+    "leader-board",
+    "lead",
+    "board"
+  ],
+  "author": "Francis Wayungi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wayungi/leader-board/issues"
+  },
+  "homepage": "https://github.com/wayungi/leader-board#readme"
+}
