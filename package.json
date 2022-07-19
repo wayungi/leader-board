@@ -2,7 +2,7 @@
   "name": "leader-board",
   "version": "1.0.0",
   "description": "application that displays scores submitted by different users",
-  "main": "index.js",
+  "private":true,
   "scripts": {
     "test": "jest"
   },
