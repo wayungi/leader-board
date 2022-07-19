@@ -63,6 +63,7 @@ justify-content: center;
 .scores-display {
   outline: 2px solid black;
   height: 340px;
+  overflow: hidden;
 }
 
 .scores-display p {
