@@ -25,6 +25,16 @@ h1 {
   margin:40px 0 40px 20px;
 }
 
+input[type="text"], input[type="submit"], input[type="button"] {
+  all:unset;
+}
+
+input[type="button"] {
+  outline: 1px solid black;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
 .section-titles {
   outline: 1px solid green;
 }
@@ -60,10 +70,6 @@ justify-content: center;
 .scores-display {
   outline: 2px solid black;
   height: 340px;
-}
-
-input[type="text"], input[type="submit"] {
-  all:unset;
 }
 
 input[type="text"] {
