@@ -10,13 +10,15 @@ input {
   padding: 0;
   font-size: 12px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
 }
 
 .wrapper {
   outline: 1px solid black;
   height: 100vh;
-  box-sizing: border-box;
 }
+
+
 
 h1 {
   font-size: 4em;
@@ -46,17 +48,22 @@ h1 {
 justify-content: center;
 }
 
-
-
-
 .content {
   flex-wrap: nowrap;
- 
 }
 
-section {
+.main-section {
+  width:50%;
   outline: 1px solid green;
 }
+
+input[type="text"] {
+  all:unset;
+  border: 1px solid black;
+  height:40px;
+  margin-bottom:40px;
+}
+
 
 .flex-col {
   display:flex;
