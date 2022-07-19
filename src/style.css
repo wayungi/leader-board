@@ -3,6 +3,12 @@ body, header, div, h1, h2, p, section, input {
     padding:0;
 }
 
+.wrapper {
+    outline:1px solid black;
+    height:100vh;
+    box-sizing:border-box;
+}
+
 
 
 
