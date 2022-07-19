@@ -23,6 +23,32 @@ h1 {
   margin:40px 0 40px 20px;
 }
 
+.section-titles {
+  outline: 1px solid green;
+}
+
+.sub-title-2 {
+  flex-wrap: nowrap;
+  outline: 1px solid black;
+  width:50%;
+  margin-bottom:30px;
+}
+
+.sub-title-2 h2 {
+  font-size:2em;
+}
+
+.scores-title {
+ justify-content: space-between;
+}
+
+.add-scores-title {
+justify-content: center;
+}
+
+
+
+
 .content {
   flex-wrap: nowrap;
  
@@ -37,8 +63,8 @@ section {
   flex-direction: column;
 }
 
-.flex-row {
-  display:grid;
+.flex-row, .sub-title-2 {
+  display:flex;
   flex-direction: row;
 }
 

@@ -12,24 +12,29 @@
     <div class="wrapper flex-col">
       <h1>Leaderboard</h1>
       <!-- content div -->
+
+      <div class="section-titles flex-row ">
+        <!-- leader board title -->
+        <div class="scores-title sub-title-2">
+          <h2>Recent scores</h2>
+          <input type="button" value="Refresh" id="refresh-btn" />
+        </div>
+
+        <!-- add scores title -->
+        <div class="add-scores-title sub-title-2" id="add-score">
+          <h2>Add your score</h2>
+        </div>
+      </div>
+
       <div class="content flex-row">
         <!-- scores div -->
         <section class="scores">
-          <div class="scores-title">
-            <h2>Recent scores</h2>
-            <input type="button" value="Refresh" id="refresh-btn" />
-          </div>
-
           <!-- scores are displayed in this div -->
           <div class="scores-display"></div>
         </section>
 
         <!-- add score div -->
         <section class="add-scores">
-          <div class="add-scores-title" id="add-score">
-            <h2>Add your score</h2>
-          </div>
-
           <form>
             <input type="text" name="name" id="name" />
             <input type="text" name="score" id="score" />
