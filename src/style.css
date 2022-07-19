@@ -84,7 +84,10 @@ input[type="submit"] {
 
 .main-section, .sub-title-2 {
   padding: 0 10%;
+}
 
+input[type="submit"], input[type="button"] {
+  cursor:pointer;
 }
 
 
