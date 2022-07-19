@@ -57,13 +57,25 @@ justify-content: center;
   outline: 1px solid green;
 }
 
-input[type="text"] {
+input[type="text"], input[type="submit"] {
   all:unset;
+}
+
+input[type="text"] {
   border: 1px solid black;
   height:30px;
   margin-bottom:30px;
   padding: 3px 8px;
   font-size: 1.5em;
+}
+
+input[type="submit"] {
+  height:30px;
+  border:1px solid black;
+  width:40%;
+  text-align:center;
+  font-weight: bold;
+  align-self: flex-end;
 }
 
 
