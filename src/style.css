@@ -17,15 +17,15 @@ input {
   height: 100vh;
 }
 
-
-
 h1 {
   font-size: 4em;
-  margin:40px 0 40px 20px;
+  margin: 40px 0 40px 20px;
 }
 
-input[type="text"], input[type="submit"], input[type="button"] {
-  all:unset;
+input[type="text"],
+input[type="submit"],
+input[type="button"] {
+  all: unset;
 }
 
 input[type="button"] {
@@ -36,20 +36,20 @@ input[type="button"] {
 
 .sub-title-2 {
   flex-wrap: nowrap;
-  width:50%;
-  margin-bottom:30px;
+  width: 50%;
+  margin-bottom: 30px;
 }
 
 .sub-title-2 h2 {
-  font-size:2em;
+  font-size: 2em;
 }
 
 .scores-title {
- justify-content: space-between;
+  justify-content: space-between;
 }
 
 .add-scores-title {
-justify-content: center;
+  justify-content: center;
 }
 
 .content {
@@ -57,7 +57,7 @@ justify-content: center;
 }
 
 .main-section {
-  width:50%;
+  width: 50%;
 }
 
 .scores-display {
@@ -71,45 +71,47 @@ justify-content: center;
   line-height: 30px;
   font-size: 1.4em;
   font-weight: bold;
-  padding:0 5px;
+  padding: 0 5px;
 }
 
-.scores-display p:nth-child(even){
+.scores-display p:nth-child(even) {
   background-color: rgba(214, 211, 207, 0.5);
 }
 
 input[type="text"] {
   border: 1px solid black;
-  height:30px;
-  margin-bottom:30px;
+  height: 30px;
+  margin-bottom: 30px;
   padding: 3px 8px;
   font-size: 1.5em;
 }
 
 input[type="submit"] {
-  height:30px;
-  border:1px solid black;
-  width:40%;
-  text-align:center;
+  height: 30px;
+  border: 1px solid black;
+  width: 40%;
+  text-align: center;
   font-weight: bold;
   align-self: flex-end;
 }
 
-.main-section, .sub-title-2 {
+.main-section,
+.sub-title-2 {
   padding: 0 10%;
 }
 
-input[type="submit"], input[type="button"] {
-  cursor:pointer;
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
 }
 
-
 .flex-col {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
-.flex-row, .sub-title-2 {
-  display:flex;
+.flex-row,
+.sub-title-2 {
+  display: flex;
   flex-direction: row;
 }
