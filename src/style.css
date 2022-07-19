@@ -57,6 +57,11 @@ justify-content: center;
   outline: 1px solid green;
 }
 
+.scores-display {
+  outline: 2px solid black;
+  height: 340px;
+}
+
 input[type="text"], input[type="submit"] {
   all:unset;
 }
@@ -76,6 +81,11 @@ input[type="submit"] {
   text-align:center;
   font-weight: bold;
   align-self: flex-end;
+}
+
+.main-section, .sub-title-2 {
+  padding: 0 10%;
+
 }
 
 
