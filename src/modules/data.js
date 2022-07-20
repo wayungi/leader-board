@@ -30,6 +30,7 @@ const createGame = async () => {
     }
   );
   const data = await response.json();
+  console.log(data.result.split(' ')[3]); 
   return data.result.split(' ')[3];
 };
 
@@ -59,7 +60,8 @@ const getScores = async (id) => {
     }
   );
   const data = await response.json();
-  return data;
+  console.log(data.result);
+  return data.result;
 };
 
 export { getNameScores, createGame, submitScore, getScores };
