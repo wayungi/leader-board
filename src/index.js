@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Add the game scores to the browser page
 refresh.addEventListener('click', async () => {
-  const scores = await getScores();
+  const scores = await getScores(gameId);
   scores.forEach((gameObj) => displayNameScore(gameObj.name, gameObj.score, scoreDisplay));
 });
