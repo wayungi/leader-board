@@ -28,8 +28,27 @@ const createGame = async () => {
       }),
     }
   );
-  const result = await response.text();
-  return result;
+
+  const data = await response.text();
+  //console.log(JSON.parse(data).result.split(' ')[3]);
+  return JSON.parse(data).result.split(' ')[3];
 };
 
-export { getNameScores, createGame };
+// submit new game score
+const submitScore = async (id, user, score) => {
+  const response = await fetch(
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: {
+        user,
+        score,
+      },
+    }
+  );
+};
+
+export { getNameScores, createGame, submitScore };
