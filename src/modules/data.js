@@ -22,16 +22,15 @@ const createGame = async () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
       body: JSON.stringify({
         name: 'Tuku kweyo',
       }),
     }
   );
-
-  const data = await response.text();
-  //console.log(JSON.parse(data).result.split(' ')[3]);
-  return JSON.parse(data).result.split(' ')[3];
+  const data = await response.json();
+  return data.result.split(' ')[3];
 };
 
 // submit new game score
@@ -51,4 +50,16 @@ const submitScore = async (id, user, score) => {
   );
 };
 
-export { getNameScores, createGame, submitScore };
+const getScores = async (id) => {
+  const response = await fetch(
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`,
+    {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+    }
+  );
+  const data = await response.json();
+  return data;
+};
+
+export { getNameScores, createGame, submitScore, getScores };
