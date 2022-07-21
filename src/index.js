@@ -10,8 +10,8 @@ const form = document.getElementById('scores-form');
 let gameId = '';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  if (getGameId) {
-    gameId = getGameId()
+  if (getGameId()) {
+    gameId = getGameId();
     console.log(`Old gane id is: ${gameId}`);
     return;
   }
@@ -24,9 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 refresh.addEventListener('click', async () => {
   scoreDisplay.innerHTML = '';
   const scores = await getScores(gameId);
-  scores.forEach((gameObj) =>
-    displayNameScore(gameObj.user, gameObj.score, scoreDisplay)
-  );
+  scores.forEach((gameObj) => displayNameScore(gameObj.user, gameObj.score, scoreDisplay));
 });
 
 form.addEventListener('submit', async (e) => {

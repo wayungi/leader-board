@@ -33,7 +33,7 @@ const submitScore = async (id, user, score) => {
     }
   );
   const data = await response.json();
-  console.log(data);
+  return data.result;
 };
 
 const getScores = async (id) => {
@@ -45,7 +45,6 @@ const getScores = async (id) => {
     }
   );
   const data = await response.json();
-  //console.log(data.result);
   return data.result;
 };
 
