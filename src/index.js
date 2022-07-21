@@ -12,11 +12,9 @@ let gameId = '';
 document.addEventListener('DOMContentLoaded', async () => {
   if (getGameId()) {
     gameId = getGameId();
-    console.log(`Old gane id is: ${gameId}`);
     return;
   }
   gameId = await createGame();
-  console.log(`New game id is : ${gameId}`);
   storeGameId(gameId);
 });
 

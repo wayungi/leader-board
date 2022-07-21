@@ -10,7 +10,7 @@ const createGame = async () => {
       body: JSON.stringify({
         name: 'Tuku kweyo',
       }),
-    }
+    },
   );
   const data = await response.json();
   return data.result.split(' ')[3];
@@ -30,7 +30,7 @@ const submitScore = async (id, user, score) => {
         user,
         score,
       }),
-    }
+    },
   );
   const data = await response.json();
   return data.result;
@@ -42,7 +42,7 @@ const getScores = async (id) => {
     {
       method: 'GET',
       headers: { Accept: 'application/json' },
-    }
+    },
   );
   const data = await response.json();
   return data.result;
