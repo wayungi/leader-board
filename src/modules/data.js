@@ -45,7 +45,7 @@ const getScores = async (id) => {
     }
   );
   const data = await response.json();
-  console.log(data.result);
+  //console.log(data.result);
   return data.result;
 };
 
