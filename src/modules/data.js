@@ -1,20 +1,3 @@
-const nameScore = [
-  { name: 'Francis', score: 100 },
-  { name: 'James', score: 93 },
-  { name: 'Peter', score: 97 },
-  { name: 'Bosco', score: 80 },
-  { name: 'Okla', score: 87 },
-  { name: 'Mich', score: 71 },
-  { name: 'Wayungi', score: 75 },
-  { name: 'Cekcan', score: 89 },
-  { name: 'Omara', score: 45 },
-  { name: 'Owino', score: 74 },
-  { name: 'Karuhanga', score: 45 },
-  { name: 'Galikuki', score: 74 },
-];
-
-const getNameScores = () => nameScore;
-
 const createGame = async () => {
   const response = await fetch(
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games',
@@ -30,25 +13,27 @@ const createGame = async () => {
     }
   );
   const data = await response.json();
-  console.log(data.result.split(' ')[3]); 
   return data.result.split(' ')[3];
 };
 
 // submit new game score
 const submitScore = async (id, user, score) => {
   const response = await fetch(
-    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`,
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores/`,
     {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json',
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
-      body: {
+      body: JSON.stringify({
         user,
         score,
-      },
+      }),
     }
   );
+  const data = await response.json();
+  console.log(data);
 };
 
 const getScores = async (id) => {
@@ -64,4 +49,4 @@ const getScores = async (id) => {
   return data.result;
 };
 
-export { getNameScores, createGame, submitScore, getScores };
+export { createGame, submitScore, getScores };

@@ -1,9 +1,10 @@
 import './style.css';
-import { getNameScores, createGame , getScores} from './modules/data.js';
+import { submitScore, createGame, getScores } from './modules/data.js';
 import displayNameScore from './modules/ui.js';
 
 const scoreDisplay = document.getElementById('scores-list');
 const refresh = document.getElementById('refresh-btn');
+const form = document.getElementById('scores-form');
 
 let gameId = '';
 
@@ -16,3 +17,13 @@ refresh.addEventListener('click', async () => {
   const scores = await getScores(gameId);
   scores.forEach((gameObj) => displayNameScore(gameObj.name, gameObj.score, scoreDisplay));
 });
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formElements = form.elements;
+  const userName = formElements.username.value;
+  const score = formElements.score.value;
+  submitScore(gameId, userName, score);
+});
+
+//submitScore();
