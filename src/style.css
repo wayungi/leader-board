@@ -25,6 +25,7 @@ h1 {
 .content section {
   width:50%;
   min-width: 300px;
+  /* outline:1px solid green; */
 }
 
 /* common classes */
@@ -36,5 +37,11 @@ h1 {
 .flex-row {
   display:flex;
   flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  .content section {
+    min-width:100%;
+  }
 }
 
