@@ -93,7 +93,8 @@ input[type="submit"]:active, input[type='button']:active {
 
 .scores-display {
   outline:1px solid black;
-  min-height: 30px;
+  height: 360px;
+  overflow-y: scroll;
 }
 
 .scores-display , h2 , input[type='button'] {
