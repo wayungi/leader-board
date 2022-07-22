@@ -5,7 +5,7 @@
   background:none;
   font-size: 12px;
   box-sizing: border-box;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ section {
 }
 
 h2 {
-  font-size:3em;
+  font-size:1.5em;
 }
 
 .scores-title {
@@ -79,6 +79,22 @@ input[type="submit"]:hover {
   border:none;
 }
 
+input[type="submit"]:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.2);
+  border:none;
+}
+
+.scores-display {
+  outline:1px solid black;
+  min-height: 30px;
+}
+
+.scores-display , h2 , input[type='button'] {
+  margin: 0  50px; 
+}
+
+
 /* common classes */
 .flex-col {
   display:flex;
@@ -93,6 +109,12 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 600px) {
   .content section {
     min-width:100%;
+  }
+
+  input[type="submit"] {
+    width:100%;
+    align-self:center;
+    text-align: center;
   }
 }
 
