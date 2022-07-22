@@ -1,3 +1,4 @@
+// deprecated
 const createGame = async () => {
   const response = await fetch(
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games',
@@ -17,9 +18,9 @@ const createGame = async () => {
 };
 
 // submit new game score
-const submitScore = async (id, user, score) => {
+const submitScore = async (user, score) => {
   const response = await fetch(
-    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores/`,
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qQRYuxFxzu4tKRnLkc8Z/scores/',
     {
       method: 'POST',
       headers: {
@@ -36,9 +37,9 @@ const submitScore = async (id, user, score) => {
   return data.result;
 };
 
-const getScores = async (id) => {
+const getScores = async () => {
   const response = await fetch(
-    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`,
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qQRYuxFxzu4tKRnLkc8Z/scores',
     {
       method: 'GET',
       headers: { Accept: 'application/json' },
