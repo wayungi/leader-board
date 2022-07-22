@@ -1,22 +1,3 @@
-// deprecated
-const createGame = async () => {
-  const response = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        name: 'Tuku kweyo',
-      }),
-    },
-  );
-  const data = await response.json();
-  return data.result.split(' ')[3];
-};
-
 // submit new game score
 const submitScore = async (user, score) => {
   const response = await fetch(
@@ -49,4 +30,4 @@ const getScores = async () => {
   return data.result;
 };
 
-export { createGame, submitScore, getScores };
+export { submitScore, getScores };

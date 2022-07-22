@@ -1,22 +1,10 @@
 import './style.css';
-import { submitScore, createGame, getScores } from './modules/data.js';
+import { submitScore, getScores } from './modules/data.js';
 import displayNameScore from './modules/ui.js';
-import { getGameId, storeGameId } from './modules/storage.js';
 
 const scoreDisplay = document.getElementById('scores-list');
 const refresh = document.getElementById('refresh-btn');
 const form = document.getElementById('scores-form');
-
-// let gameId = '';
-
-// document.addEventListener('DOMContentLoaded', async () => {
-//   if (getGameId()) {
-//     gameId = getGameId();
-//     return;
-//   }
-//   gameId = await createGame();
-//   storeGameId(gameId);
-// });
 
 // Add the game scores to the browser page
 refresh.addEventListener('click', async () => {
