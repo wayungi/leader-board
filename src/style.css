@@ -101,6 +101,19 @@ input[type="submit"]:active, input[type='button']:active {
   margin: 0  50px; 
 }
 
+.scores-display p {
+  height:30px;
+  padding:3px 15px;
+  line-height: 30px;
+  font-size: 1.3em;
+}
+
+.scores-display p:nth-child(even) {
+ background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 /* common classes */
 .flex-col {
