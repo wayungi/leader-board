@@ -18,7 +18,6 @@ h1 {
 }
 
 .content {
-  outline:1px solid black;
   flex-wrap: wrap;
 } 
 
@@ -26,11 +25,9 @@ section {
   width:50%;
   min-width: 300px;
   align-items: center;
-  /* outline:4px solid green; */
 }
 
 .sub-title-2 {
-  outline:1px solid red;
   margin: 20px 0;
 }
 
@@ -47,7 +44,6 @@ h2 {
 }
 
 form {
-  /* outline: 2px solid pink; */
   width:50%;
 }
 
@@ -73,16 +69,26 @@ input[type="submit"] {
   font-weight: bold;
 }
 
-input[type="submit"]:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  border:none;
+input[type='button'] {
+  all:unset;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding:4px 10px;
+  height: 20px;
+  width:80px;
+  border-radius: 5px;
 }
 
-input[type="submit"]:active {
+input[type="submit"]:hover, input[type='button']:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border:1px solid rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:active, input[type='button']:active {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.2);
-  border:none;
+  border:1px solid rgba(0, 0, 0, 0.1);;;
 }
 
 .scores-display {
@@ -107,6 +113,10 @@ input[type="submit"]:active {
 }
 
 @media only screen and (max-width: 600px) {
+
+  h1 {
+    text-align: center;
+  }
   .content section {
     min-width:100%;
   }
@@ -115,6 +125,11 @@ input[type="submit"]:active {
     width:100%;
     align-self:center;
     text-align: center;
+  }
+
+  form {
+    width:100%;
+    padding: 0 40px;
   }
 }
 
