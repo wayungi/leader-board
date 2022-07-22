@@ -4,37 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <title>Leader board</title>
   </head>
   <body>
-    <!-- main wrapper div -->
     <div class="wrapper flex-col">
       <h1>Leaderboard</h1>
-      <!-- content div -->
-
-      <div class="section-titles flex-row ">
-        <!-- leader board title -->
-        <div class="scores-title sub-title-2">
-          <h2>Recent scores</h2>
-          <input type="button" value="Refresh" id="refresh-btn" />
-        </div>
-
-        <!-- add scores title -->
-        <div class="add-scores-title sub-title-2" id="add-score">
-          <h2>Add your score</h2>
-        </div>
-      </div>
-
       <div class="content flex-row">
-        <!-- scores div -->
         <section class="scores main-section">
-          <!-- scores are displayed in this div -->
+          <div class="scores-title sub-title-2">
+            <h2>Recent scores</h2>
+            <input type="button" value="Refresh" id="refresh-btn" />
+          </div>
           <div class="scores-display" id="scores-list"></div>
         </section>
-
-        <!-- add score div -->
         <section class="add-scores main-section">
+          <div class="add-scores-title sub-title-2" id="add-score">
+            <h2>Add your score</h2>
+          </div>
           <form class="flex-col" id="scores-form">
             <input type="text" name="username" id="name" placeholder="Your name" />
             <input type="text" name="score" id="score" placeholder="Your score"/>
