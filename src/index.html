@@ -10,15 +10,18 @@
     <div class="wrapper flex-col">
       <h1>Leaderboard</h1>
       <div class="content flex-row">
+
         <section class="scores main-section">
-          <div class="scores-title sub-title-2">
+          <div class="scores-title sub-title-2 flex-row">
             <h2>Recent scores</h2>
             <input type="button" value="Refresh" id="refresh-btn" />
           </div>
           <div class="scores-display" id="scores-list"></div>
         </section>
-        <section class="add-scores main-section">
-          <div class="add-scores-title sub-title-2" id="add-score">
+
+
+        <section class="add-scores main-section flex-col">
+          <div class="add-scores-title sub-title-2 flex-row" id="add-score">
             <h2>Add your score</h2>
           </div>
           <form class="flex-col" id="scores-form">
@@ -27,6 +30,7 @@
             <input type="submit" value="Submit" id="submit-btn" />
           </form>
         </section>
+        
       </div>
     </div>
   </body>

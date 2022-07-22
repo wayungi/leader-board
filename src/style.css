@@ -5,7 +5,7 @@
   background:none;
   font-size: 12px;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .wrapper {
@@ -22,10 +22,55 @@ h1 {
   flex-wrap: wrap;
 } 
 
-.content section {
+section {
   width:50%;
   min-width: 300px;
-  /* outline:1px solid green; */
+  align-items: center;
+  /* outline:4px solid green; */
+}
+
+.sub-title-2 {
+  outline:1px solid red;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size:3em;
+}
+
+.scores-title {
+  justify-content: space-between;
+}
+
+.add-scores-title {
+  justify-content: center;
+}
+
+form {
+  /* outline: 2px solid pink; */
+  width:50%;
+}
+
+input[type='text'], input[type="submit"]  {
+  all:unset;
+  outline:1px solid rgba(150,150,150, 0.5);
+  margin-bottom:30px;
+  height:40px;
+  border-radius: 5px;
+}
+
+input[type='text'] {
+  padding:4px 10px;
+  font-size:1.5em;
+
+}
+
+input[type="submit"] {
+  width:50%;
+  align-self:flex-end;
+  text-align: center;
+  cursor:pointer;
+  font-weight: bold;
 }
 
 /* common classes */
