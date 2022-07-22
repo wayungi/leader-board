@@ -1,16 +1,11 @@
-body,
-header,
-div,
-h1,
-h2,
-p,
-section,
-input {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+  border-radius: 0;
+  background: none;
   font-size: 12px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .wrapper {
@@ -19,29 +14,25 @@ input {
 
 h1 {
   font-size: 4em;
-  margin: 40px 0 40px 20px;
+  padding: 20px 20px;
 }
 
-input[type="text"],
-input[type="submit"],
-input[type="button"] {
-  all: unset;
+.content {
+  flex-wrap: wrap;
 }
 
-input[type="button"] {
-  outline: 1px solid black;
-  padding: 0 20px;
-  font-weight: bold;
+section {
+  width: 50%;
+  min-width: 300px;
+  align-items: center;
 }
 
 .sub-title-2 {
-  flex-wrap: nowrap;
-  width: 50%;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 
-.sub-title-2 h2 {
-  font-size: 2em;
+h2 {
+  font-size: 1.5em;
 }
 
 .scores-title {
@@ -52,66 +43,107 @@ input[type="button"] {
   justify-content: center;
 }
 
-.content {
-  flex-wrap: nowrap;
-}
-
-.main-section {
+form {
   width: 50%;
 }
 
-.scores-display {
-  outline: 2px solid black;
-  height: 340px;
-  overflow: hidden;
-}
-
-.scores-display p {
-  height: 30px;
-  line-height: 30px;
-  font-size: 1.4em;
-  font-weight: bold;
-  padding: 0 5px;
-}
-
-.scores-display p:nth-child(even) {
-  background-color: rgba(214, 211, 207, 0.5);
-}
-
-input[type="text"] {
-  border: 1px solid black;
-  height: 30px;
+input[type='text'],
+input[type="submit"] {
+  all: unset;
+  outline: 1px solid rgba(150, 150, 150, 0.5);
   margin-bottom: 30px;
-  padding: 3px 8px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+input[type='text'] {
+  padding: 4px 10px;
   font-size: 1.5em;
 }
 
 input[type="submit"] {
-  height: 30px;
-  border: 1px solid black;
-  width: 40%;
-  text-align: center;
-  font-weight: bold;
+  width: 50%;
   align-self: flex-end;
-}
-
-.main-section,
-.sub-title-2 {
-  padding: 0 10%;
-}
-
-input[type="submit"],
-input[type="button"] {
+  text-align: center;
   cursor: pointer;
+  font-weight: bold;
 }
 
+input[type='button'] {
+  all: unset;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 4px 10px;
+  height: 20px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.scores-display,
+h2,
+input[type='button'] {
+  margin: 0  50px;
+}
+
+input[type="submit"]:hover,
+input[type='button']:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:active,
+input[type='button']:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.scores-display {
+  outline: 1px solid black;
+  height: 360px;
+  overflow-y: scroll;
+}
+
+.scores-display p {
+  height: 30px;
+  padding: 3px 15px;
+  line-height: 30px;
+  font-size: 1.3em;
+}
+
+.scores-display p:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* common classes */
 .flex-col {
   display: flex;
   flex-direction: column;
 }
 
-.flex-row,
-.sub-title-2 {
+.flex-row {
   display: flex;
   flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    text-align: center;
+  }
+
+  .content section {
+    min-width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 40px;
+  }
 }
