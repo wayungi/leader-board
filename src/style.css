@@ -17,10 +17,20 @@ h1 {
   padding:20px 20px;
 }
 
+.content {
+  outline:1px solid black;
+  flex-wrap: wrap;
+} 
+
 
 /* common classes */
 .flex-col {
   display:flex;
   flex-direction: column;
+}
+
+.flex-row {
+  display:flex;
+  flex-direction: row;
 }
 
