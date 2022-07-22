@@ -27,7 +27,7 @@ The leader board application displays scores submitted by different players. It'
 
 ## Live Demo
 
-[Live Demo Link](https://wayungi.github.io/leader-board/)
+[Live Demo Link](https://wayungi.github.io/leader-board/dist)
 
 ## Authors
 
