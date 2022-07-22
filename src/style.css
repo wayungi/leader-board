@@ -22,6 +22,10 @@ h1 {
   flex-wrap: wrap;
 } 
 
+.content section {
+  width:50%;
+  min-width: 300px;
+}
 
 /* common classes */
 .flex-col {
