@@ -4,11 +4,22 @@ const userIcon = () => {
   return user;
 };
 
-const displayNameScore = (name, score, pageElement) => {
-  const nameScoreParagraph = document.createElement('p');
-  nameScoreParagraph.innerText = `${name}:${score}`;
-  pageElement.appendChild(nameScoreParagraph);
-  return true;
+const nameScoreDiv = (name, score) => {
+  const nameScoreDiv = document.createElement('div');
+
+  const namePara = document.createElement('p');
+  namePara.innerText = `${name}`;
+
+  const scorePara = document.createElement('p');
+  scorePara.innerText = `${score}`;
+
+  nameScoreDiv.appendChild(namePara);
+  nameScoreDiv.appendChild(scorePara);
+  return nameScoreDiv;
 };
+
+
+
+
 
 export default displayNameScore;
