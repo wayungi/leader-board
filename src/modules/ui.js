@@ -4,7 +4,7 @@ const userIcon = () => {
   return user;
 };
 
-const nameScoreDiv = (name, score) => {
+const createNameScore = (name, score) => {
   const nameScoreDiv = document.createElement('div');
 
   const namePara = document.createElement('p');
@@ -18,8 +18,26 @@ const nameScoreDiv = (name, score) => {
   return nameScoreDiv;
 };
 
+const displayPlayer = (playerRecord) => {
+  const { userIcon, nameScore, pageElement, rank } = playerRecord;
+  const scoreContainer = document.createElement('div');
+  scoreContainer.classList.add('score-container');
 
+  const rankDiv = document.createElement('div');
+  rankDiv.classList.add('rank');
+  rankDiv.innerText = rank;
 
+  scoreContainer.appendChild(rankDiv);
+  scoreContainer.appendChild(userIcon);
+  scoreContainer.appendChild(nameScore);
 
+  pageElement.appendChild(scoreContainer);
 
-export default displayNameScore;
+  return scoreContainer;
+};
+
+export {
+  userIcon,
+  createNameScore,
+  displayPlayer,
+};
