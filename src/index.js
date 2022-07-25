@@ -10,7 +10,12 @@ const form = document.getElementById('scores-form');
 refresh.addEventListener('click', async () => {
   scoreDisplay.innerHTML = '';
   const scores = await getScores();
-  
+  const userIcon = userIcon();
+  let count = 0;
+  scores.forEach((gameObj) => {
+    count += 1;
+    const nameScore = createNameScore(gameObj.user, gameObj.score)
+    displayPlayer({ userIcon, nameScore, scoreDisplay, count });
 });
 
 form.addEventListener('submit', async (e) => {
