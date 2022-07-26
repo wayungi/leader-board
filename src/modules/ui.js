@@ -6,6 +6,7 @@ const userIcon = () => {
 
 const createNameScore = (user, score) => {
   const nameScoreDiv = document.createElement('div');
+  nameScoreDiv.classList.add('name-score');
   const namePara = document.createElement('p');
   namePara.innerText = `${user}`;
   const scorePara = document.createElement('p');
