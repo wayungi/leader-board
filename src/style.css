@@ -112,10 +112,6 @@ input[type='button']:active {
   font-size: 1.3em;
 }
 
-.scores-display p:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 /* common classes */
 .flex-col {
   display: flex;
