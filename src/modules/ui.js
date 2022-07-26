@@ -4,35 +4,27 @@ const userIcon = () => {
   return user;
 };
 
-const createNameScore = (name, score) => {
+const createNameScore = (user, score) => {
   const nameScoreDiv = document.createElement('div');
-
   const namePara = document.createElement('p');
-  namePara.innerText = `${name}`;
-
+  namePara.innerText = `${user}`;
   const scorePara = document.createElement('p');
   scorePara.innerText = `${score}`;
-
   nameScoreDiv.appendChild(namePara);
   nameScoreDiv.appendChild(scorePara);
   return nameScoreDiv;
 };
 
-const displayPlayer = (playerRecord) => {
-  const { userIcon, nameScore, pageElement, rank } = playerRecord;
+const displayPlayer = (record) => {
   const scoreContainer = document.createElement('div');
   scoreContainer.classList.add('score-container');
-
   const rankDiv = document.createElement('div');
   rankDiv.classList.add('rank');
-  rankDiv.innerText = rank;
-
+  rankDiv.innerText = record.rank;
   scoreContainer.appendChild(rankDiv);
-  scoreContainer.appendChild(userIcon);
-  scoreContainer.appendChild(nameScore);
-
-  pageElement.appendChild(scoreContainer);
-
+  scoreContainer.append(record.userImage);
+  scoreContainer.appendChild(record.nameScore);
+  record.pageElement.appendChild(scoreContainer);
   return scoreContainer;
 };
 

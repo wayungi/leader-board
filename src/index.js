@@ -1,21 +1,26 @@
 import './style.css';
 import { submitScore, getScores } from './modules/data.js';
-import { userIcon, createNameScore, displayPlayer, userIcon } from './modules/ui.js';
+import { userIcon, createNameScore, displayPlayer } from './modules/ui.js';
 
 const scoreDisplay = document.getElementById('scores-list');
 const refresh = document.getElementById('refresh-btn');
 const form = document.getElementById('scores-form');
+let count = 0;
 
 // Add the game scores to the browser page
 refresh.addEventListener('click', async () => {
   scoreDisplay.innerHTML = '';
   const scores = await getScores();
-  const userIcon = userIcon();
   let count = 0;
-  scores.forEach((gameObj) => {
+  scores.forEach((data) => {
     count += 1;
-    const nameScore = createNameScore(gameObj.user, gameObj.score)
-    displayPlayer({ userIcon, nameScore, scoreDisplay, count });
+    displayPlayer({
+      rank: count,
+      userImage: userIcon(),
+      nameScore: createNameScore(data.user, data.score),
+      pageElement: scoreDisplay,
+    });
+  });
 });
 
 form.addEventListener('submit', async (e) => {
@@ -28,6 +33,10 @@ form.addEventListener('submit', async (e) => {
   formElements.username.value = '';
 
   if (!userName.trim() || !score.trim()) return;
-  displayNameScore(userName, score, scoreDisplay);
+  const userPhoto = userIcon();
+  const nameScore = createNameScore(userName, score);
+  count += 1;
+  displayPlayer({ userPhoto, nameScore, scoreDisplay, count });
+
   submitScore(userName, score);
 });
