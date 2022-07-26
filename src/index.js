@@ -25,7 +25,6 @@ refresh.addEventListener('click', async () => {
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-
   const formElements = form.elements;
   const userName = formElements.username.value;
   const score = formElements.score.value;
@@ -39,4 +38,19 @@ form.addEventListener('submit', async (e) => {
   displayPlayer({ userPhoto, nameScore, scoreDisplay, count });
 
   submitScore(userName, score);
+});
+
+window.addEventListener('DOMContentLoaded', async () => {
+  scoreDisplay.innerHTML = '';
+  const scores = await getScores();
+  let count = 0;
+  scores.forEach((data) => {
+    count += 1;
+    displayPlayer({
+      rank: count,
+      userImage: userIcon(),
+      nameScore: createNameScore(data.user, data.score),
+      pageElement: scoreDisplay,
+    });
+  });
 });
