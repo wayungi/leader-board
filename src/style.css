@@ -22,9 +22,8 @@
 
 @keyframes changing-bg {
   0% {
-    background-color: rgba(199, 13, 236, 0.2);
+    background-color: rgba(145, 46, 165, 0.2);
   }
-
   50% {
     background-color: rgba(126, 206, 22, 0.2);
   }
@@ -121,10 +120,12 @@ input[type='button']:active {
 }
 
 .scores-display {
-  outline: 1px solid rgba(70, 70, 70, 0.4);
-  height: 360px;
+  /* outline: 1px solid rgba(126, 206, 22, 0.2); */
+  height: 400px;
   overflow-y: scroll;
   border-radius: 2px;
+  box-shadow: 0 0 3px 2px rgba(15, 204, 147, 0.2);
+  background-color: antiquewhite;
 
 }
 
@@ -135,7 +136,7 @@ input[type='button']:active {
   align-items: center;
   padding: 0 5px 0 10px;
   background-color: white;
-  border-bottom: 1px solid rgba(70, 70, 70, 0.4); ;
+  border-bottom: 1px solid antiquewhite;
 }
 
 .name-score {
