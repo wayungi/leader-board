@@ -104,14 +104,14 @@ input[type='button']:active {
   height: 360px;
   overflow-y: scroll;
 }
-
+/* -------------------------- */
 .score-container {
   outline:1px solid black;
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  padding: 0 5px 0 15px;
+  padding: 0 5px 0 10px;
 }
 
 .name-score {
@@ -120,6 +120,17 @@ input[type='button']:active {
   flex-direction:column;
 }
 
+.rank {
+  font-size: 1.5em;
+  color:aqua;
+  font-weight: bold;
+  margin-right:10px;
+}
+
+.fa-user {
+  color:blueviolet;
+}
+/* ------------------ */
 .scores-display p {
   height: 30px;
   padding: 3px 15px;

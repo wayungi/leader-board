@@ -1,6 +1,6 @@
 const userIcon = () => {
   const user = document.createElement('div');
-  user.innerHTML = '<i class="fa-solid fa-user"></i>';
+  user.innerHTML = '<i class="fa-solid fa-user fa-3x"></i>';
   return user;
 };
 
