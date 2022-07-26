@@ -10,6 +10,27 @@
 
 .wrapper {
   height: 100vh;
+  border-color: aqua;
+  animation-name: changing-bg;
+  animation-duration: 10s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-play-state: running;
+  animation-direction: alternate;
+}
+
+@keyframes changing-bg {
+  0% {
+    background-color: rgba(141, 80, 153, 0.315);
+  }
+
+  50% {
+    background-color: rgba(86, 119, 44, 0.514);
+  }
+  100%  {
+  background-color:rgba(112, 196, 171, 0.514);
+  }
 }
 
 h1 {
@@ -106,7 +127,7 @@ input[type='button']:active {
   border-radius: 2px;
 
 }
-/* -------------------------- */
+
 .score-container {
   display:flex;
   flex-direction: row;
