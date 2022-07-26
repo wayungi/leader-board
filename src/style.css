@@ -22,14 +22,14 @@
 
 @keyframes changing-bg {
   0% {
-    background-color: rgba(141, 80, 153, 0.315);
+    background-color: rgba(199, 13, 236, 0.2);
   }
 
   50% {
-    background-color: rgba(86, 119, 44, 0.514);
+    background-color: rgba(126, 206, 22, 0.2);
   }
   100%  {
-  background-color:rgba(112, 196, 171, 0.514);
+  background-color:rgba(15, 204, 147, 0.2);
   }
 }
 
