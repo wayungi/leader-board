@@ -115,20 +115,33 @@ input[type='button']:active {
 }
 
 .name-score {
-  outline:1px solid red;
   display:flex;
   flex-direction:column;
 }
 
+.name-score p {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight:bold;
+}
+
+.name-score p:nth-child(odd) {
+  text-transform: capitalize;
+  color:rgb(20,20,200, .6);
+}
+
+.name-score p:nth-child(even) {
+  color:rgb(20,20,20, .6);
+}
+
 .rank {
   font-size: 1.5em;
-  color:aqua;
+  color:rgba(100, 100, 100, 0.3);
   font-weight: bold;
   margin-right:10px;
 }
 
 .fa-user {
-  color:blueviolet;
+  color:rgba(118, 8, 209, 0.3);
 }
 /* ------------------ */
 .scores-display p {
