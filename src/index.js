@@ -5,6 +5,7 @@ import { userIcon, createNameScore, displayPlayer } from './modules/ui.js';
 const scoreDisplay = document.getElementById('scores-list');
 const refresh = document.getElementById('refresh-btn');
 const form = document.getElementById('scores-form');
+const modalClose = document.getElementById('close-btn');
 let count = 0;
 
 // Add the game scores to the browser page

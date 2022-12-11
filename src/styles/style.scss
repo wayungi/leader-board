@@ -12,6 +12,7 @@
 div.wrapper {
   display: flex;
   flex-direction: column;
+  position:relative;
 
   h1 {
     text-align: center;
@@ -31,14 +32,12 @@ div.wrapper {
       margin-bottom: 15px;
     }
 
-    // div that holds user container (div)
     div.display-scores {
       min-height: 40px;
       width: 100%;
       display: flex;
       flex-direction: column;
 
-      //   div that holds user score data
       div.score-container {
         display: flex;
         margin: 5px 10px;
@@ -67,13 +66,20 @@ div.wrapper {
 
     input[type='button'] {
       all: unset;
+      cursor: pointer;
       margin: 5px auto;
-      width: 90%;
+      width: 95%;
       text-align: center;
-      border: 1px solid white;
-      padding: 10px 0;
+      box-shadow: 0 0 3px 2px rgba(5, 5, 159, 0.7);
+      padding: 20px 0;
       border-radius: 5px;
       font-family: 'Rubik Vinyl', cursive;
+
+      &:active {
+        box-shadow: 0 0 1px 1px rgba(2, 2, 88, 0.7);
+        background-color: rgba(2, 2, 88, 0.7);
+
+      }
     }
   }
 }
@@ -84,12 +90,10 @@ div.wrapper {
 
 div.name-score {
     margin-left:auto;
-    // outline:1px solid black;
     display:flex;
     text-align: center;
     p{
         background-color: inherit;
-        // outline:1px solid red;
         margin-left:10px;
         font-size:2em;
         font-family: 'Rubik Vinyl', cursive;
@@ -102,4 +106,84 @@ div.name-score {
 .rank {
     font-size:3em;
     margin-right:10px;
+}
+
+section.add-score-form {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    z-index:5;
+    background-color: rgba(27, 27, 235, 0.3);
+    padding:40px 10px;
+
+    
+    #scores-form {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;ax='100' min='0'
+        border-radius: 5px;
+        height:100%;
+        padding:20px 10px;
+        background-color: rgb(7, 7, 133);
+        font-family: 'Rubik Vinyl', cursive;
+
+        .close-btn {
+            background-color: inherit;
+            margin-top:0;
+            margin-bottom:80px;
+            font-size: 2em;
+            width:fit-content;
+            margin-left:auto;
+            padding:10px;
+            cursor:pointer;
+            border-radius:50%;
+        }
+
+
+        h2 {
+            margin-bottom:100px;
+            font-size:2em;
+            text-align: center;
+            background-color: inherit;
+            color:rgba(218, 235, 27, 1)
+        }
+
+        input {
+            all:unset;
+            height:50px;
+            box-sizing: border-box;
+            font-size: 1.5em;
+        }
+
+        input[type='text'],  input[type='number']{
+            padding:10px 15px;
+            border-radius:5px;
+            margin-bottom:10px;
+            background-color: rgba(2, 2, 88, 0.7);
+            color:yellowgreen;
+        }
+
+        /* Remove Arrows/Spinners firefox*/
+        input[type='number']{
+            appearance: textfield;
+        }
+
+        /*Remove Arrows/Spinners Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        input[type='submit'] {
+            text-align: center;
+            background-color: rgba(2, 2, 88, 0.7);
+            margin-top:20px;
+            cursor:pointer;
+        }
+    }
 }
