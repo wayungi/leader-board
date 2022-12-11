@@ -73,9 +73,17 @@ div.wrapper section.scores input[type=button] {
 
 div.name-score {
   margin-left: auto;
+  display: flex;
+  text-align: center;
 }
 div.name-score p {
   background-color: inherit;
+  margin-left: 10px;
+  font-size: 2em;
+  font-family: "Rubik Vinyl", cursive;
+  display: flex;
+  align-items: center;
+  color: rgb(189, 208, 43);
 }
 
 .rank {

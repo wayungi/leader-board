@@ -18,8 +18,6 @@ const createNameScore = (user, score) => {
 };
 
 const displayPlayer = (record) => {
-  console.log(record);
-
   const scoreContainer = document.createElement('div');
   scoreContainer.classList.add('score-container');
   const rankDiv = document.createElement('div');
