@@ -1,4 +1,4 @@
-import './style.css';
+import './styles/style.css';
 import { submitScore, getScores } from './modules/data.js';
 import { userIcon, createNameScore, displayPlayer } from './modules/ui.js';
 
