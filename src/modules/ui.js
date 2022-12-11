@@ -1,6 +1,7 @@
 const userIcon = () => {
   const user = document.createElement('div');
-  user.innerHTML = '<i class="fa-solid fa-user fa-3x"></i>';
+  user.classList.add('avatar-div');
+  user.innerHTML = ' <i class="fa-solid fa-user fa-3x"></i>';
   return user;
 };
 
@@ -17,11 +18,13 @@ const createNameScore = (user, score) => {
 };
 
 const displayPlayer = (record) => {
+  console.log(record);
+
   const scoreContainer = document.createElement('div');
   scoreContainer.classList.add('score-container');
   const rankDiv = document.createElement('div');
   rankDiv.classList.add('rank');
-  rankDiv.innerText = record.rank;
+  rankDiv.innerText = `${record.rank}. `;
   scoreContainer.appendChild(rankDiv);
   scoreContainer.append(record.userImage);
   scoreContainer.appendChild(record.nameScore);

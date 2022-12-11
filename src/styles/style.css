@@ -30,8 +30,31 @@ div.wrapper section.scores h2 {
 }
 div.wrapper section.scores div.display-scores {
   min-height: 40px;
-  outline: 1px solid white;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+div.wrapper section.scores div.display-scores div.score-container {
+  display: flex;
+  margin: 5px 10px;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+div.wrapper section.scores div.display-scores div.score-container > * {
+  background-color: transparent;
+}
+div.wrapper section.scores div.display-scores > :nth-child(even) {
+  background-color: rgb(155, 145, 145);
+}
+div.wrapper section.scores div.display-scores > :nth-child(even):hover {
+  background-color: rgba(200, 200, 250, 0.7);
+}
+div.wrapper section.scores div.display-scores > :nth-child(odd) {
+  background-color: rgb(64, 59, 59);
+}
+div.wrapper section.scores div.display-scores > :nth-child(odd):hover {
+  background-color: rgba(88, 88, 174, 0.7);
 }
 div.wrapper section.scores input[type=button] {
   all: unset;
@@ -42,4 +65,20 @@ div.wrapper section.scores input[type=button] {
   padding: 10px 0;
   border-radius: 5px;
   font-family: "Rubik Vinyl", cursive;
+}
+
+.fa-user {
+  background-color: inherit;
+}
+
+div.name-score {
+  margin-left: auto;
+}
+div.name-score p {
+  background-color: inherit;
+}
+
+.rank {
+  font-size: 3em;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
