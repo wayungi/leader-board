@@ -1,4 +1,4 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
   border-radius: 0;
@@ -37,6 +37,14 @@ h1 {
   padding: 20px 20px;
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
+h2, h1 {
+  color:cadetblue
+}
+
 .content {
   flex-wrap: wrap;
 }
@@ -49,10 +57,6 @@ section {
 
 .sub-title-2 {
   margin: 20px 0;
-}
-
-h2 {
-  font-size: 1.5em;
 }
 
 .scores-title {
@@ -91,12 +95,15 @@ input[type="submit"] {
 
 input[type='button'] {
   all: unset;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 4px 10px;
   height: 20px;
   width: 80px;
   border-radius: 5px;
+  color:cadetblue;
+  font-weight: bold;
+  background-color: rgba(145, 46, 165, 0.2);
+
 }
 
 .scores-display,
@@ -108,19 +115,17 @@ input[type='button'] {
 input[type="submit"]:hover,
 input[type='button']:hover {
   background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+ 
+  color:white;
 }
 
 input[type="submit"]:active,
 input[type='button']:active {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .scores-display {
-  /* outline: 1px solid rgba(126, 206, 22, 0.2); */
   height: 400px;
   overflow-y: scroll;
   border-radius: 5px;
@@ -168,7 +173,6 @@ input[type='button']:active {
 .fa-user {
   color:rgba(118, 8, 209, 0.3);
 }
-/* ------------------ */
 .scores-display p {
   height: 30px;
   padding: 3px 15px;
@@ -176,7 +180,6 @@ input[type='button']:active {
   font-size: 1.3em;
 }
 
-/* common classes */
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -208,7 +211,6 @@ input[type='button']:active {
   }
 }
 
-/* hide scoll bar in chrome */
 ::-webkit-scrollbar {
   display: none;
-}
+} */
