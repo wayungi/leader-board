@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;300;800&family=Lato:wght@100;300;400;700;900&family=Rubik+Vinyl&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -14,33 +13,28 @@ div.wrapper {
   flex-direction: column;
   position: relative;
 }
-
 div.wrapper h1 {
   text-align: center;
   font-family: "Rubik Vinyl", cursive;
   font-size: 3em;
   margin: 20px 0;
 }
-
 div.wrapper section.scores {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 div.wrapper section.scores h2 {
   font-family: "Rubik Vinyl", cursive;
   font-size: 2em;
   margin-bottom: 15px;
 }
-
 div.wrapper section.scores div.display-scores {
   min-height: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
 div.wrapper section.scores div.display-scores div.score-container {
   display: flex;
   margin: 5px 10px;
@@ -48,27 +42,21 @@ div.wrapper section.scores div.display-scores div.score-container {
   padding: 10px;
   cursor: pointer;
 }
-
 div.wrapper section.scores div.display-scores div.score-container > * {
   background-color: transparent;
 }
-
 div.wrapper section.scores div.display-scores > :nth-child(odd) {
   background-color: rgb(64, 59, 59);
 }
-
 div.wrapper section.scores div.display-scores > :nth-child(even) {
   background-color: rgb(155, 145, 145);
 }
-
 div.wrapper section.scores div.display-scores > :nth-child(odd):hover {
   background-color: rgba(88, 88, 174, 0.7);
 }
-
 div.wrapper section.scores div.display-scores > :nth-child(even):hover {
   background-color: rgba(200, 200, 250, 0.7);
 }
-
 div.wrapper section.scores input[type=button] {
   all: unset;
   cursor: pointer;
@@ -80,7 +68,6 @@ div.wrapper section.scores input[type=button] {
   border-radius: 5px;
   font-family: "Rubik Vinyl", cursive;
 }
-
 div.wrapper section.scores input[type=button]:active {
   box-shadow: 0 0 1px 1px rgba(2, 2, 88, 0.7);
   background-color: rgba(2, 2, 88, 0.7);
@@ -95,7 +82,6 @@ div.name-score {
   display: flex;
   text-align: center;
 }
-
 div.name-score p {
   background-color: inherit;
   margin-left: 10px;
@@ -122,7 +108,6 @@ section.add-score-form {
   z-index: 5;
   background-color: rgba(27, 27, 235, 0.3);
 }
-
 section.add-score-form #scores-form {
   display: flex;
   flex-direction: column;
@@ -132,12 +117,9 @@ section.add-score-form #scores-form {
   padding: 20px 10px;
   background-color: rgb(7, 7, 133);
   font-family: "Rubik Vinyl", cursive;
-
   /* Remove Arrows/Spinners firefox */
-
   /* Remove Arrows/Spinners Chrome, Safari, Edge, Opera */
 }
-
 section.add-score-form #scores-form .close-btn {
   background-color: inherit;
   margin-top: 0;
@@ -151,7 +133,6 @@ section.add-score-form #scores-form .close-btn {
   cursor: pointer;
   border-radius: 50%;
 }
-
 section.add-score-form #scores-form h2 {
   margin-bottom: 100px;
   font-size: 2em;
@@ -159,14 +140,12 @@ section.add-score-form #scores-form h2 {
   background-color: inherit;
   color: rgb(218, 235, 27);
 }
-
 section.add-score-form #scores-form input {
   all: unset;
   height: 50px;
   box-sizing: border-box;
   font-size: 1.5em;
 }
-
 section.add-score-form #scores-form input[type=text],
 section.add-score-form #scores-form input[type=number] {
   padding: 10px 15px;
@@ -175,19 +154,16 @@ section.add-score-form #scores-form input[type=number] {
   background-color: rgba(2, 2, 88, 0.7);
   color: yellowgreen;
 }
-
 section.add-score-form #scores-form input[type=number] {
   -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
 }
-
 section.add-score-form #scores-form input::-webkit-outer-spin-button,
 section.add-score-form #scores-form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 section.add-score-form #scores-form input[type=submit] {
   text-align: center;
   background-color: rgba(2, 2, 88, 0.7);
@@ -199,7 +175,6 @@ section.add-score-form #scores-form input[type=submit] {
   div.content {
     display: flex;
   }
-
   section.add-score-form {
     display: flex;
     width: 52%;
@@ -209,38 +184,27 @@ section.add-score-form #scores-form input[type=submit] {
     top: 130px;
     background-color: rgba(27, 27, 235, 0.3);
   }
-
   section.add-score-form #scores-form {
     width: 100%;
   }
-
   section.add-score-form #scores-form .close-btn {
     display: none;
   }
-
   section.add-score-form #scores-form h2 {
     margin-bottom: 50px;
   }
-
   section.scores {
     display: flex;
   }
-
   section.scores #add-score-btn {
     display: none;
   }
-
   section.scores #refresh-btn {
     order: -2;
     width: 20%;
     display: none;
   }
-
-  section.scores .scores h2 {
-    width: 40%;
-  }
 }
-
 .hide {
   display: none;
-}
+}/*# sourceMappingURL=style.css.map */

@@ -59,13 +59,11 @@ div.wrapper {
       }
 
       > :nth-child(odd):hover {
-          background-color: rgba(88, 88, 174, 0.7);
-        }
+        background-color: rgba(88, 88, 174, 0.7);
       }
 
       > :nth-child(even):hover {
-          background-color: rgba(200, 200, 250, 0.7);
-        }
+        background-color: rgba(200, 200, 250, 0.7);
       }
     }
 
@@ -234,9 +232,6 @@ section.add-score-form {
       display: none;
     }
 
-    .scores h2 {
-      width: 40%;
-    }
   }
 }
 
