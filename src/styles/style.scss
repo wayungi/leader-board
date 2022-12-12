@@ -50,19 +50,19 @@ div.wrapper {
         }
       }
 
-      > :nth-child(even) {
-        background-color: rgb(155, 145, 145);
-
-        &:hover {
-          background-color: rgba(200, 200, 250, 0.7);
-        }
-      }
-
       > :nth-child(odd) {
         background-color: rgb(64, 59, 59);
 
         &:hover {
           background-color: rgba(88, 88, 174, 0.7);
+        }
+      }
+
+      > :nth-child(even) {
+        background-color: rgb(155, 145, 145);
+
+        &:hover {
+          background-color: rgba(200, 200, 250, 0.7);
         }
       }
     }
@@ -198,48 +198,44 @@ section.add-score-form {
   }
 
   section.add-score-form {
-    display:flex;
+    display: flex;
     width: 52%;
-    height: 400px;;
+    height: 400px;
     position: fixed;
-    left:45%;
-    top:130px;
+    left: 45%;
+    top: 130px;
     background-color: rgba(27, 27, 235, 0.3);
 
     #scores-form {
-      width:100%;
+      width: 100%;
+
       .close-btn {
-        display:none;
+        display: none;
       }
 
       h2 {
         margin-bottom: 50px;
       }
     }
-  
   }
 
   section.scores {
-    display:flex;
-    
+    display: flex;
+
     #add-score-btn {
-      display:none;
+      display: none;
     }
 
     #refresh-btn {
       order: -2;
-      width:20%;
-      display:none;
+      width: 20%;
+      display: none;
     }
-  
+
     .scores h2 {
-      width:40%;
+      width: 40%;
     }
-
-   
-
   }
-
 }
 
 .hide {
