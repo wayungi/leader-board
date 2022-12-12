@@ -4,33 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/7a892cb0b1.js" crossorigin="anonymous"></script>  
     <title>Leader board</title>
   </head>
   <body>
-    <div class="wrapper flex-col">
+    <div class="wrapper">
       <h1>Leaderboard</h1>
-      <div class="content flex-row">
 
-        <section class="scores main-section">
-          <div class="scores-title sub-title-2 flex-row">
+      <div class="content">
+        <section class="scores">
             <h2>Recent scores</h2>
+            <div class="display-scores" id="scores-list"></div>
             <input type="button" value="Refresh" id="refresh-btn" />
-          </div>
-          <div class="scores-display" id="scores-list"></div>
+            <input type="button" value="Add score" id="add-score-btn" />
         </section>
 
-
-        <section class="add-scores main-section flex-col">
-          <div class="add-scores-title sub-title-2 flex-row" id="add-score">
+        <section class="add-score-form hide" id="form-section">
+          <form class="" id="scores-form">
+            <div class="close-btn" id="close-btn">&times;</div>
             <h2>Add your score</h2>
-          </div>
-          <form class="flex-col" id="scores-form">
-            <input type="text" name="username" id="name" placeholder="Your name" />
-            <input type="text" name="score" id="score" placeholder="Your score"/>
+            <input type="text" name="username" id="name" placeholder="Your name" required/>
+            <input type="number" max='100' min='0' name="score" id="score" placeholder="Your score" required/>
             <input type="submit" value="Submit" id="submit-btn" />
           </form>
-        </section>
-        
+        </section>   
       </div>
     </div>
   </body>

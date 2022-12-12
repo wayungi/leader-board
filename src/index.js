@@ -1,21 +1,32 @@
-import './style.css';
+import './styles/style.css';
 import { submitScore, getScores } from './modules/data.js';
-import displayNameScore from './modules/ui.js';
+import { userIcon, createNameScore, displayPlayer } from './modules/ui.js';
 
-const scoreDisplay = document.getElementById('scores-list');
+const pageElement = document.getElementById('scores-list');
 const refresh = document.getElementById('refresh-btn');
 const form = document.getElementById('scores-form');
+const formSection = document.getElementById('form-section');
+const modalClose = document.getElementById('close-btn');
+const addScoreBtn = document.getElementById('add-score-btn');
+let count = 0;
 
 // Add the game scores to the browser page
 refresh.addEventListener('click', async () => {
-  scoreDisplay.innerHTML = '';
+  pageElement.innerHTML = '';
   const scores = await getScores();
-  scores.forEach((gameObj) => displayNameScore(gameObj.user, gameObj.score, scoreDisplay));
+  scores.forEach((data) => {
+    count += 1;
+    displayPlayer({
+      rank: count,
+      userImage: userIcon(),
+      nameScore: createNameScore(data.user, data.score),
+      pageElement,
+    });
+  });
 });
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-
   const formElements = form.elements;
   const userName = formElements.username.value;
   const score = formElements.score.value;
@@ -23,6 +34,39 @@ form.addEventListener('submit', async (e) => {
   formElements.username.value = '';
 
   if (!userName.trim() || !score.trim()) return;
-  displayNameScore(userName, score, scoreDisplay);
+  const userPhoto = userIcon();
+  const nameScore = createNameScore(userName, score);
+  count += 1;
+  displayPlayer({
+    rank: count,
+    userImage: userPhoto,
+    nameScore,
+    pageElement,
+  });
+
+  formSection.classList.add('hide');
+
   submitScore(userName, score);
+});
+
+modalClose.addEventListener('click', () => {
+  formSection.classList.add('hide');
+});
+
+addScoreBtn.addEventListener('click', () => {
+  formSection.classList.remove('hide');
+});
+
+window.addEventListener('DOMContentLoaded', async () => {
+  pageElement.innerHTML = '';
+  const scores = await getScores();
+  scores.forEach((data) => {
+    count += 1;
+    displayPlayer({
+      rank: count,
+      userImage: userIcon(),
+      nameScore: createNameScore(data.user, data.score),
+      pageElement,
+    });
+  });
 });
