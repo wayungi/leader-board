@@ -107,7 +107,6 @@ section.add-score-form {
   left: 0;
   z-index: 5;
   background-color: rgba(27, 27, 235, 0.3);
-  padding: 40px 10px;
 }
 section.add-score-form #scores-form {
   display: flex;
@@ -118,8 +117,8 @@ section.add-score-form #scores-form {
   padding: 20px 10px;
   background-color: rgb(7, 7, 133);
   font-family: "Rubik Vinyl", cursive;
-  /* Remove Arrows/Spinners firefox*/
-  /*Remove Arrows/Spinners Chrome, Safari, Edge, Opera */
+  /* Remove Arrows/Spinners firefox */
+  /* Remove Arrows/Spinners Chrome, Safari, Edge, Opera */
 }
 section.add-score-form #scores-form .close-btn {
   background-color: inherit;
@@ -147,7 +146,8 @@ section.add-score-form #scores-form input {
   box-sizing: border-box;
   font-size: 1.5em;
 }
-section.add-score-form #scores-form input[type=text], section.add-score-form #scores-form input[type=number] {
+section.add-score-form #scores-form input[type=text],
+section.add-score-form #scores-form input[type=number] {
   padding: 10px 15px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -169,4 +169,8 @@ section.add-score-form #scores-form input[type=submit] {
   background-color: rgba(2, 2, 88, 0.7);
   margin-top: 20px;
   cursor: pointer;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
