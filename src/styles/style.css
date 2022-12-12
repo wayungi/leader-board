@@ -170,6 +170,9 @@ section.add-score-form #scores-form input[type=submit] {
   margin-top: 20px;
   cursor: pointer;
 }
+section.add-score-form #scores-form input[type=submit]:active {
+  background-color: rgba(18, 18, 218, 0.7);
+}
 
 @media (width >= 920px) {
   div.content {

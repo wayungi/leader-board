@@ -186,6 +186,10 @@ section.add-score-form {
       margin-top: 20px;
       cursor: pointer;
     }
+
+    input[type='submit']:active {
+      background-color: rgba(18, 18, 218, 0.7);
+    }
   }
 }
 
