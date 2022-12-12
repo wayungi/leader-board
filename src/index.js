@@ -44,6 +44,8 @@ form.addEventListener('submit', async (e) => {
     pageElement,
   });
 
+  formSection.classList.add('hide');
+
   submitScore(userName, score);
 });
 
