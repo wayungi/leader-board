@@ -1,13 +1,11 @@
-# leader-board
+# LEADER-BOARD
 The leader board application displays scores submitted by different players. It's built with Javscript, html, css and webpack.
-
 ## Built With
 
 - HTML.
 - CSS.
 - JavaScript.
 - Flexbox
-- CSS Grid
 
 
 ## Getting Started
@@ -24,6 +22,14 @@ The leader board application displays scores submitted by different players. It'
 - Run npm install
 - Run "npm run start"
 - The Application will load in your default browser
+
+### Mobile screen shots
+![mobile - top](https://user-images.githubusercontent.com/99656687/207020149-05e5a5ee-32b2-4488-aad6-2ee16e713a8e.png)
+![mobile-add-score](https://user-images.githubusercontent.com/99656687/207020062-da0a2620-957b-468e-a8b9-e4a75065b036.png)
+
+### Large screen shot
+![large-screen](https://user-images.githubusercontent.com/99656687/207020131-f0dfe41c-f4bb-4e40-b65d-e42608174ac8.png)
+
 
 ## Live Demo
 
