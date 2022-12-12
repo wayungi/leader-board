@@ -123,7 +123,6 @@ section.add-score-form {
   background-color: rgba(27, 27, 235, 0.3);
   // padding: 40px 10px;
 
-
   #scores-form {
     display: flex;
     flex-direction: column;
@@ -189,6 +188,58 @@ section.add-score-form {
       cursor: pointer;
     }
   }
+}
+
+// ========= large screen styles ===========
+
+@media (width >= 920px) {
+  div.content {
+    display: flex;
+  }
+
+  section.add-score-form {
+    display:flex;
+    width: 52%;
+    height: 400px;;
+    position: fixed;
+    left:45%;
+    top:130px;
+    background-color: rgba(27, 27, 235, 0.3);
+
+    #scores-form {
+      width:100%;
+      .close-btn {
+        display:none;
+      }
+
+      h2 {
+        margin-bottom: 50px;
+      }
+    }
+  
+  }
+
+  section.scores {
+    display:flex;
+    
+    #add-score-btn {
+      display:none;
+    }
+
+    #refresh-btn {
+      order: -2;
+      width:20%;
+      display:none;
+    }
+  
+    .scores h2 {
+      width:40%;
+    }
+
+   
+
+  }
+
 }
 
 .hide {

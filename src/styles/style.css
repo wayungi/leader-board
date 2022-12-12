@@ -171,6 +171,43 @@ section.add-score-form #scores-form input[type=submit] {
   cursor: pointer;
 }
 
+@media (width >= 920px) {
+  div.content {
+    display: flex;
+  }
+  section.add-score-form {
+    display: flex;
+    width: 52%;
+    height: 400px;
+    position: fixed;
+    left: 45%;
+    top: 130px;
+    background-color: rgba(27, 27, 235, 0.3);
+  }
+  section.add-score-form #scores-form {
+    width: 100%;
+  }
+  section.add-score-form #scores-form .close-btn {
+    display: none;
+  }
+  section.add-score-form #scores-form h2 {
+    margin-bottom: 50px;
+  }
+  section.scores {
+    display: flex;
+  }
+  section.scores #add-score-btn {
+    display: none;
+  }
+  section.scores #refresh-btn {
+    order: -2;
+    width: 20%;
+    display: none;
+  }
+  section.scores .scores h2 {
+    width: 40%;
+  }
+}
 .hide {
   display: none;
 }/*# sourceMappingURL=style.css.map */
